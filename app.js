@@ -145,23 +145,6 @@ const sum = nums.reduce((acc, number) => {
 
 /* log the final sum */
 console.log(sum);
-
-
-// class example
-let votes = ['Yes', 'No', 'Yes', 'Yes', 'No'];
-
-let tally = votes.reduce(function (acc, vote) {
-    if (acc[vote]) {
-        acc[vote] = acc[vote] + 1;
-    } else {
-        acc[vote] = 1;
-    }
-    return acc;
-}, {});
-
-console.log(tally);
-
-// tally is { 'Yes': 3, 'No': 2 }
 /*
 🐯 STEP 2 — Sum Numbers with reduce()(No complexity)
 🎯 Skill unlocked
@@ -179,3 +162,29 @@ let sum2 = nums2.reduce(function (accumulator, num) {
 
 /* log the result */
 console.log(sum2);
+
+
+/* 🐙 STEP 3 — Reduce to an Object (Tallying)
+🎯 Skill unlocked
+
+Using reduce() to build an object step by step */
+
+/* array of votes */
+const votes = ['Yes', 'No', 'Yes', 'Yes', 'No'];
+
+/* tally votes using reduce */
+const tally = votes.reduce(function (acc, vote) {
+    /* if this vote already exists in acc */
+    if (acc[vote]) {
+        acc[vote] = acc[vote] + 1;
+    } else {
+        /* first time seeing this vote */
+        acc[vote] = 1;
+    }
+
+    /* return the updated accumulator */
+    return acc;
+}, {});
+
+/* log the tally */
+console.log(tally);
