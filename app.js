@@ -64,3 +64,29 @@ const firstBigNumberIndex = numbers.findIndex((number) => {
 /* log results */
 console.log(firstBigNumber);
 console.log(firstBigNumberIndex);
+
+/* 
+🐼 STEP 5 — some() & every()
+🎯 Skill unlocked
+
+Asking questions about arrays without looping or counting
+*/
+
+/* array of test scores */
+const scores = [95, 82, 67, 88, 91];
+
+/* check if SOME scores are failing */
+const hasFailingScore = scores.some((score) => {
+    /* return true if any score is below 70 */
+    return score < 70;
+});
+
+/* check if EVERY score is passing */
+const allPassing = scores.every((score) => {
+    /* return true only if all scores are 70 or higher */
+    return score >= 70;
+});
+
+/* log results */
+console.log(hasFailingScore);
+console.log(allPassing);
