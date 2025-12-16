@@ -36,10 +36,14 @@ const notJerks = people.filter((person) => {
     return person !== 'jerks';
 });
 
-const notJerks2 = people.filter(person => !person.includes('jerks'));
-
 /* log the filtered result */
 console.log(notJerks);
+
+const people2 = ['nice jerks', 'elephant jerks', 'jerks', 'nice people', 'jerks', 'nice people', 'nice people'];
+
+const notJerks2 = people2.filter(person => !person.includes('jerks'));
+
+/* log the filtered result */
 console.log(notJerks2);
 
 
