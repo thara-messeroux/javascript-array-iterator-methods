@@ -168,3 +168,14 @@ console.log(tally);
 
 Reducing an array of numbers into a single sum value
  */
+
+/* array of numbers */
+const nums2 = [25, 5, 100, 10];
+
+/* sum the numbers with reduce */
+let sum2 = nums2.reduce(function (accumulator, num) {
+    return accumulator + num;
+}, 0);
+
+/* log the result */
+console.log(sum2);
