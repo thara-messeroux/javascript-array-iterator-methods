@@ -36,8 +36,11 @@ const notJerks = people.filter((person) => {
     return person !== 'jerks';
 });
 
+const notJerks2 = people.filter(person => !person.includes('jerks'));
+
 /* log the filtered result */
 console.log(notJerks);
+console.log(notJerks2);
 
 
 /* 
@@ -90,3 +93,10 @@ const allPassing = scores.every((score) => {
 /* log results */
 console.log(hasFailingScore);
 console.log(allPassing);
+
+/* 
+🦁 STEP 6 — Pro Decision - Making Mindset
+🎯 Skill unlocked
+
+Instantly knowing which array method to use(industry intuition)
+*/
