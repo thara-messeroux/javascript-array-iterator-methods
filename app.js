@@ -1,5 +1,6 @@
 console.log('Hello from app.js');
 
+// map() You Do
 /* original array of instructors */
 const instructors = ['Beryl', 'Hunter', 'Joe', 'Jurgen', 'Ben', 'David'];
 
