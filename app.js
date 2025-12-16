@@ -104,3 +104,67 @@ console.log(allPassing);
 
 Instantly knowing which array method to use(industry intuition)
 */
+
+/* 
+🐸 STEP 1 — reduce() Mental Model (No pressure)
+
+🦦 Animal team for this step: Patient Otter Team (hold one thing, build slowly)
+
+🎯 What reduce() really is
+
+reduce() is for when you want to turn an array into one single value.
+
+That “single value” can be:
+
+a number (sum)
+
+a string (combined sentence)
+
+an object (tally counts)
+
+even another array */
+
+// array.reduce((acc, currentValue) => {
+//     /* update acc using currentValue */
+//     return acc;
+// }, initialValue);
+/* acc = accumulator (holds the value we are building)
+
+currentValue = the current item from the array
+
+initialValue = what acc starts as (number, string, object, array) */
+
+/* original array of numbers */
+const nums = [5, 10, 15];
+
+/* use reduce to sum the numbers */
+const sum = nums.reduce((acc, number) => {
+    /* add the current number to the accumulator */
+    return acc + number;
+}, 0); /* start acc at 0 */
+
+/* log the final sum */
+console.log(sum);
+
+
+// class example
+let votes = ['Yes', 'No', 'Yes', 'Yes', 'No'];
+
+let tally = votes.reduce(function (acc, vote) {
+    if (acc[vote]) {
+        acc[vote] = acc[vote] + 1;
+    } else {
+        acc[vote] = 1;
+    }
+    return acc;
+}, {});
+
+console.log(tally);
+
+// tally is { 'Yes': 3, 'No': 2 }
+/*
+🐯 STEP 2 — Sum Numbers with reduce()(No complexity)
+🎯 Skill unlocked
+
+Reducing an array of numbers into a single sum value
+ */
