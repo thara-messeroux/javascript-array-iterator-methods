@@ -1,7 +1,7 @@
 console.log('Hello from app.js');
 
 /* 
-STEP 2 — map()(Transforming Arrays Safely)
+🐢 STEP 2 — map()(Transforming Arrays Safely)
 🎯 Skill unlocked
 
 Turning one array into a new array without breaking anything
@@ -40,4 +40,27 @@ const notJerks = people.filter((person) => {
 console.log(notJerks);
 
 
+/* 
+🦊 STEP 4 — find() & findIndex()
+🎯 Skill unlocked
 
+Finding ONE thing in an array without looping manually
+*/
+/* array of numbers */
+const numbers = [3, 7, 12, 5, 9];
+
+/* find the first number greater than 10 */
+const firstBigNumber = numbers.find((number) => {
+    /* return true when condition is met */
+    return number > 10;
+});
+
+/* find the index of the first number greater than 10 */
+const firstBigNumberIndex = numbers.findIndex((number) => {
+    /* return true when condition is met */
+    return number > 10;
+});
+
+/* log results */
+console.log(firstBigNumber);
+console.log(firstBigNumberIndex);
